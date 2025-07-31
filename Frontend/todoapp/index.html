@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TodoTask.</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Glory:ital,wght@0,100..800;1,100..800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body style="font-family: Glory, sans-serif;">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    // Toggle password visibility
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+    const confirmPassword = document.querySelector('#confirmPassword');
+
+    togglePassword.addEventListener('click', function (e) {
+      // toggle the type attribute for both password fields
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      confirmPassword.setAttribute('type', type);
+
+      // toggle the eye / eye slash icon
+      this.querySelector('i').classList.toggle('fa-eye');
+      this.querySelector('i').classList.toggle('fa-eye-slash');
+    });
+
+    // Form submission
+    const loginForm = document.getElementById('loginForm');
+
+    loginForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      // Simple validation
+      if (!firstName || !lastName || !email || !password || !confirmPassword) {
+        alert('Please fill in all fields');
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        alert('Passwords do not match');
+        return;
+      }
+
+      // Here you would typically send the data to a server
+      console.log('Registration attempted with:', {
+        firstName,
+        lastName,
+        email,
+        password
+      });
+
+      // For demo purposes, show a success message
+      alert('Registration successful! (This is a demo)');
+
+      // Reset form
+      loginForm.reset();
+    });
+  </script>
+</body>
+
+
+
+</html>
