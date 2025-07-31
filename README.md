@@ -9,6 +9,7 @@ Aplikasi TodoTask sederhana yang memungkinkan pengguna untuk mencatat, mengedit,
 ### Backend (Laravel)
 1. Masuk ke folder `backend`:
 cd backend
+cd todo-backend
 
 2. Jalankan:
 composer install
@@ -17,9 +18,15 @@ php artisan key:generate
 php artisan migrate
 php artisan serve
 
+Login sebagai Admin / Mengakses dashboard
+email : anisa@gmail.com
+password : 12345678
+
+
 ### Frontend (React)
 1. Masuk ke folder `frontend`:
 cd frontend
+cd todoapp
 
 2. Jalankan:
 npm install
