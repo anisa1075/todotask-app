@@ -1,54 +1,99 @@
 # TodoTask App 📝
 
-Aplikasi TodoTask sederhana yang memungkinkan pengguna untuk mencatat, mengedit, dan menghapus daftar tugas.
+Aplikasi TodoTask sederhana yang memungkinkan pengguna untuk mencatat, mengedit, dan menghapus daftar tugas. Project ini dibangun menggunakan stack Laravel sebagai backend dan React (Vite) sebagai frontend.
 
 ---
 
 ## 🚀 Instruksi Setup Project
 
-### Backend (Laravel)
-1. Masuk ke folder `backend`:
-cd backend
-cd todo-backend
+### 📦 Backend (Laravel + Vite)
 
-2. Jalankan:
-composer install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
+1. Masuk ke folder `backend`:
+- cd backend
+
+2. Install dependency PHP:
+- composer install
+
+3. Copy file environment:
+- cp .env.example .env
+- php artisan key:generate
+
+4. Konfigurasi database di file `.env`, lalu jalankan migrasi:
+- php artisan migrate
+
+5. Install dependency frontend Laravel (Vite, Tailwind, dsb):
+- npm install
+
+
+6. Jalankan Vite:
+npm run dev
+
+7. Jalankan Laravel server:
 php artisan serve
 
-Login sebagai Admin / Mengakses dashboard
-email : anisa@gmail.com
-password : 12345678
-
-
-### Frontend (React)
-1. Masuk ke folder `frontend`:
-cd frontend
-cd todoapp
-
-2. Jalankan:
-npm install
-npm start
+8. Akses backend melalui:
+http://127.0.0.1:8000
 
 
 ---
 
-## 📁 Struktur Proyek
+### 🎨 Frontend (React + Vite)
+
+1. Masuk ke folder `frontend`:
+cd frontend
+
+2. Install dependency:
+npm install
+
+3. Jalankan frontend:
+npm run dev
+
+4. Buka browser dan akses:
+http://localhost:5173
+
+---
+
+## 📁 Struktur Folder Proyek
 
 todotask-app/
-├── frontend/
+├── frontend/ # React + Vite app
+│ ├── index.html
 │ └── src/
-├── backend/
-│ └── app/
+├── backend/ # Laravel API
+│ ├── app/
+│ ├── resources/
+│ └── routes/api.php
 ├── README.md
 
 ---
 
 ## 🛠️ Teknologi yang Digunakan
 
-- React.js
+### Backend:
 - Laravel 10
-- Tailwind CSS
+- Vite (untuk asset build)
 - MySQL
+- Composer
+- PHP 8.x
+
+### Frontend:
+- React.js
+- Vite
+- Tailwind CSS
+- Axios
+
+---
+
+## ✅ Fitur
+
+- Tambah tugas
+- Edit tugas
+- Hapus tugas
+- Tandai tugas selesai (opsional)
+- Integrasi backend & frontend melalui REST API
+
+---
+
+## 🧑‍💻 Developer
+
+> Dibuat oleh Anisa — untuk belajar dan mengembangkan aplikasi produktivitas sederhana berbasis full
