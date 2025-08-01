@@ -18,8 +18,11 @@ Aplikasi TodoTask sederhana yang memungkinkan pengguna untuk mencatat, mengedit,
 - cp .env.example .env
 - php artisan key:generate
 
-4. Konfigurasi database di file `.env`, lalu jalankan migrasi:
-- php artisan migrate
+4. Konfigurasi database di file `.env`, lalu jalankan migrasi dan seeder:
+- php artisan migrate --seed
+
+Catatan: Pastikan seeder kamu sudah terdaftar di DatabaseSeeder.php, misalnya:
+``$this->call(UserSeeder::class);
 
 5. Install dependency frontend Laravel (Vite, Tailwind, dsb):
 - npm install
