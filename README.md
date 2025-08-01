@@ -37,6 +37,11 @@ php artisan serve
 8. Akses backend melalui:
 http://127.0.0.1:8000
 
+9. Akses User yang sudah login
+klik button login di server
+- email : admin@gmail.com
+- password : 12345678
+
 
 ---
 
