@@ -99,4 +99,4 @@ todotask-app/
 
 ## 🧑‍💻 Developer
 
-> Dibuat oleh Anisa — untuk belajar dan mengembangkan aplikasi produktivitas sederhana berbasis full
+> Dibuat oleh Anisa — untuk belajar dan mengembangkan aplikasi produktivitas sederhana berbasis fullstack tech

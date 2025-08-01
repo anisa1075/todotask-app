@@ -48,11 +48,12 @@ const Navbar = () => {
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem('user');
-    window.dispatchEvent(new Event("userChanged")); // trigger navbar update
-    setDropdownOpen(false);
-    navigate('/login');
-  };
+  localStorage.removeItem('user');
+  localStorage.removeItem('token'); // ← penting, agar Home tahu user sudah logout
+  window.dispatchEvent(new Event("userChanged"));
+  setDropdownOpen(false);
+  navigate('/login');
+};
 
   return (
     <nav style={{ backgroundColor: "rgba(247, 237, 225)" }} className="shadow-lg z-20 absolute w-full top-0">
